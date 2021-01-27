@@ -1,6 +1,6 @@
 # custom-form-controls
 
-> A Vue.js project
+> 自定义表单控件，可以使用v-model语法糖
 
 ## Build Setup
 
