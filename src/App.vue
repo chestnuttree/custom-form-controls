@@ -1,23 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <custom-params v-model="value" />
+    <button @click="handleGet">获取value值</button>
   </div>
 </template>
 
 <script>
+import CustomParams from "./components/custom-params";
 export default {
-  name: 'App'
+  components: {
+        CustomParams,
+    },
+  name: 'App',
+  data() {
+        return {
+            value: {
+              a:"123"
+            },
+        };
+    },
+    methods:{
+      handleGet(){
+        console.log(this.value)
+      }
+    }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>
